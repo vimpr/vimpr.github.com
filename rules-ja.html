@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+  <head>
+    <title>vimpr</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <h1>注意事項</h1>
+
+    <h2>ルール</h2>
+
+    <ul>
+      <li>特に必要なければ、マージコミットを発生させないでください。</li>
+      <li>git push --force は絶対にしてはいけません。すると爆発します。</li>
+      <li>特に必要があれば、トピックブランチを作っても構いません。</li>
+      <li>ブランチ名は指定のフォーマットに従ってください。</li>
+    </ul>
+
+    <h2>基本的方針</h2>
+
+    <ul>
+      <li>git push するまえに、git pull --rebase しましょう。</li>
+      <li>バグを見つけたら勝手に直しましょう。</li>
+      <li>遠慮なくビシビシ push しましょう。</li>
+    </ul><h2>ブランチ名のフォーマット</h2>
+
+    <p>ブランチ名は以下のように命名するものとします。
+    "&lt;拡張子抜きプラグインファイル名&gt;/&lt;内容を表す名前(ハイフン区切り)&gt;"
+    例えば</p>
+
+<pre><code>stella/support-html5
+feedSomeKeys_3/add-special-option
+</code></pre>
+    </body>
+  </html>
+
