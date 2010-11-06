@@ -1,0 +1,22 @@
+#contents {
+  margin:10%;
+}
+p {
+  text-align:justify;
+  text-indent:1em;
+}
+h1 {
+  padding:0.5em 0em 0.5em 0.5em;
+  border-width:0px 0px 1px 5px;
+  border-style:solid;
+  border-color:silver;
+}
+h2 {
+  padding:0.5em 0em 0.5em 0.5em;
+  border-width:3px 0px 0px 0px;
+  border-style:solid;
+  border-color:silver;
+}
+.topspace {
+  margin-top:2em;
+}
