@@ -21,3 +21,6 @@ h2 {
 .topspace {
   margin-top:2em;
 }
+.external:after {
+  content:url('link-icon_external.gif');
+}
