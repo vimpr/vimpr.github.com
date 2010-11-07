@@ -24,3 +24,10 @@ h2 {
 .external:after {
   content:url('link-icon_external.gif');
 }
+.code {
+  padding-left:1em;
+  padding-right:1em;
+  border-style:dashed;
+  border-color:silver;
+  border-width:1px;
+}
