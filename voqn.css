@@ -7,42 +7,42 @@
 
 
 * {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-  background: black !important;
-  color: white !important;
-  font-family: monospace !important;
-  padding: 0.5em 0 0.1em 0.75em !important;
+  background: black;
+  color: white;
+  font-family: monospace;
+  padding: 0.5em 0 0.1em 0.75em;
 }
 
 table {
-  margin: 1em !important;
-  padding: 0.5em !important;
-  border: 1px solid lightgray !important;
+  margin: 1em;
+  padding: 0.5em;
+  border: 1px solid lightgray;
 }
 
 th {
-  border-bottom: 1px solid magenta !important;
-  color: magenta !important;
-  text-align: left !important;
-  font-weight: bold !important;
-  font-size: 1.5em !important;
+  border-bottom: 1px solid magenta;
+  color: magenta;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 td {
-  padding: 0 3em 0.5em 0 !important;
+  padding: 0 3em 0.5em 0;
   border-bottom: solid 1px #eeeeee;
 }
 
 td.name {
-  font-weight: bold !important;
-  font-size: 1.2em !important;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .last-updated {
-  text-align: right !important;
+  text-align: right;
 }
 
