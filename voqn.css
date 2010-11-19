@@ -42,7 +42,8 @@ td.name {
   font-size: 1.2em;
 }
 
-.last-updated {
+.last-updated, .back-to-top {
   text-align: right;
+  margin-right: 2em;
 }
 
