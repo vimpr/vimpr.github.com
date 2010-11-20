@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>はぢめての Vimpr</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <div id="contents">
+	  <h1>はぢめての Vimpr</h1>
+    <h2>このドキュメントの目的</h2>
+    <p>このドキュメントでは「Vimpr に参加したいけどどうすればいいのか、さっぱりわかんない」という人や「github って何？」「リポジトリに push するの、ハジメテなの <span class="red">&hearts;</span>」という人が、Vimpr に参加するのに必要な手順を箇条書きにしています。</p>
+    <p>なお、以下の説明は Linux を前提に書かれているので、他の OS を利用されている方は適宜読みかえてください。</p>
+
+    <h2>とりあえず push できるようになりましょう</h2>
+    <p>とりあえず Vimpr のリポジトリに push できるようになるまでの初歩的な手順を以下に箇条書きにします。Vimperator plugin を書く能力はすでにあるものとします。</p>
+    <p>また、以下の説明では &quot;vimpr&quot; ディレクトリ以下にデフォルトの名称でローカル・リポジトリを作成するものとします。これらを変更する場合は適宜読みかえてください。</p>
+    <ol style="line-height:1.5em;">
+      <li>github のアカウントを作成する
+        <ol>
+          <li>github のアカウントを取得しましょう。無料プランで充分です。</li>
+          <li>SSH 公開鍵をつくって github に登録しましょう。</li>
+        </ol>
+      </li>
+      <li>ローカル・リポジトリの作成
+        <ol>
+          <li>console を開きます。</li>
+          <li>&quot;mkdir vimpr&quot; 等で &quot;vimpr&quot; ディレクトリを作ります。</li>
+          <li>&quot;cd vimpr&quot; 等で &quot;vimpr&quot; をカレント・ディレクトリにします。</li>
+          <li>&quot;git clone git@github.com:vimpr/vimperator-plugins.git&quot; を実行します。</li>
+          <li>パスワードを尋ねられますので、SSH 公開鍵を作成する時に設定したパスワードを入力します。</li>
+          <li>ローカル・リポジトリ &quot;vimperator-plugins&quot; が &quot;vimpr&quot; 以下に作成されるので、&quot;cd vimperator-plugins&quot; で移動します。</li>
+          <li>念のため &quot;git pull --rebase&quot; で github 上のリポジトリの最新状態を取得します。</li>
+        </ol>
+      </li>
+      <li>作業する
+        <ol>
+          <li>&quot;git checkout -b topic_branch_name&quot; で作業用の topic branch を作成してください。</li>
+          <li>topic branch 上で作業をします。</li>
+        </ol>
+      </li>
+      <li>gitpub 上のリポジトリへの push
+        <ol>
+          <li>&quot;git checkout master&quot; を実行して master branch に移動します。</li>
+          <li>&quot;git pull --rebase&quot; を実行します。</li>
+          <li>&quot;git rebase master topic_branch_name&quot; を実行し fast-forward を維持します。</li>
+          <li>&quot;git checkout master&quot; を実行します。</li>
+          <li>&quot;git merge topic_branch_name&quot; を実行します。</li>
+          <li>&quot;git push&quot; でローカル・リポジトリの内容を github 上のリポジトリに push します。push 時に前述のパスワードを入力してください。</li>
+          <li>push するときにエラーが発生する場合、<span class="red">&quot;git push -force&quot; は絶対にやってはいけません。github 上のリポジトリが壊れます。</span></li>
+        </ol>
+      </li>
+      <li>後始末
+        <ol>
+          <li>不要になった topic branch を &quot;git branch -d topic_branch_name&quot; で削除してください。</li>
+        </ol>
+      </li>
+    </ol>
+    <p>以上で github への登録から github 上のリポジトリに push できるまでの手順の解説は終りです。</p>
+
+    <h2>注意事項</h2>
+    <ul style="line-height:1.5em;">
+      <li>github 上の branch は fast-forward にすることを厳守してください</li>
+      <li>繰り返しますが push 時にエラーが発生する場合、<span class="red">&quot;git push -force&quot; は絶対にやってはいけません。github 上のリポジトリが壊れます。</li>
+    </ul>
+
+    <h2>参考資料</h2>
+    <ul style="line-height:1.5em;">
+      <li><a href="https://github.com/" class="external">github</a></li>
+      <li><a href="http://design1.chu.jp/setucocms-pjt/?p=580" class="external">初心者Git日記その五～GitHubにSSH公開鍵登録～</a></li>
+      <li>junio こと git メンテナー<a href="http://www.amazon.co.jp/dp/4798023809" class="external">濱野純さんの入門Git</a> : 超オススメ</li>
+      <li><a href="http://progit.org/" class="external">Pro Git</a> : Top Page 最下部に各国語訳へのリンクがある</li>
+    </ul>
+    <a href="index.html">to Top Page</a>
+  </div>
+</body>
+</html>
