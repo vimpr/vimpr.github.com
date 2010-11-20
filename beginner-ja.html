@@ -25,34 +25,34 @@
       <li>ローカル・リポジトリの作成
         <ol>
           <li>console を開きます。</li>
-          <li>&quot;mkdir vimpr&quot; 等で &quot;vimpr&quot; ディレクトリを作ります。</li>
-          <li>&quot;cd vimpr&quot; 等で &quot;vimpr&quot; をカレント・ディレクトリにします。</li>
+          <li>&quot;mkdir vimpr&quot; を実行します。</li>
+          <li>&quot;cd vimpr&quot; を実行します。</li>
           <li>&quot;git clone git@github.com:vimpr/vimperator-plugins.git&quot; を実行します。</li>
-          <li>パスワードを尋ねられますので、SSH 公開鍵を作成する時に設定したパスワードを入力します。</li>
-          <li>ローカル・リポジトリ &quot;vimperator-plugins&quot; が &quot;vimpr&quot; 以下に作成されるので、&quot;cd vimperator-plugins&quot; で移動します。</li>
-          <li>念のため &quot;git pull --rebase&quot; で github 上のリポジトリの最新状態を取得します。</li>
+          <li>SSH 公開鍵を作成する時に設定したパスワードを入力します。</li>
+          <li>&quot;cd vimperator-plugins&quot; を実行します。</li>
+          <li>&quot;git pull --rebase&quot; を実行します。</li>
         </ol>
       </li>
       <li>作業する
         <ol>
-          <li>&quot;git checkout -b topic_branch_name&quot; で作業用の topic branch を作成してください。</li>
-          <li>topic branch 上で作業をします。</li>
+          <li>&quot;git checkout -b topic_branch_name&quot; を実行します。</li>
+          <li>作成した topic branch 上で作業をします。</li>
         </ol>
       </li>
       <li>gitpub 上のリポジトリへの push
         <ol>
-          <li>&quot;git checkout master&quot; を実行して master branch に移動します。</li>
+          <li>&quot;git checkout master&quot; を実行します。</li>
           <li>&quot;git pull --rebase&quot; を実行します。</li>
-          <li>&quot;git rebase master topic_branch_name&quot; を実行し fast-forward を維持します。</li>
+          <li>&quot;git rebase master topic_branch_name&quot; を実行します。</li>
           <li>&quot;git checkout master&quot; を実行します。</li>
           <li>&quot;git merge topic_branch_name&quot; を実行します。</li>
-          <li>&quot;git push&quot; でローカル・リポジトリの内容を github 上のリポジトリに push します。push 時に前述のパスワードを入力してください。</li>
-          <li>push するときにエラーが発生する場合、<span class="red">&quot;git push -force&quot; は絶対にやってはいけません。github 上のリポジトリが壊れます。</span></li>
+          <li>&quot;git push&quot; を実行します。<span class="red">--force オプションは絶対に使ってはいけません</span>。</li>
+          <li>SSH 公開鍵を作成する時に設定したパスワードを入力します。</li>
         </ol>
       </li>
       <li>後始末
         <ol>
-          <li>不要になった topic branch を &quot;git branch -d topic_branch_name&quot; で削除してください。</li>
+          <li>&quot;git branch -d topic_branch_name&quot; を実行します。</li>
         </ol>
       </li>
     </ol>
@@ -65,12 +65,23 @@
     </ul>
 
     <h2>参考資料</h2>
-    <ul style="line-height:1.5em;">
-      <li><a href="https://github.com/" class="external">github</a></li>
-      <li><a href="http://design1.chu.jp/setucocms-pjt/?p=580" class="external">初心者Git日記その五～GitHubにSSH公開鍵登録～</a></li>
-      <li>junio こと git メンテナー<a href="http://www.amazon.co.jp/dp/4798023809" class="external">濱野純さんの入門Git</a> : 超オススメ</li>
-      <li><a href="http://progit.org/" class="external">Pro Git</a> : Top Page 最下部に各国語訳へのリンクがある</li>
-    </ul>
+    <dl style="line-height:1.5em;">
+      <dt>github</dt>
+      <dd>
+        <ul>
+          <li><a href="https://github.com/" class="external">github</a></li>
+          <li><a href="http://design1.chu.jp/setucocms-pjt/?p=580" class="external">初心者Git日記その五～GitHubにSSH公開鍵登録～</a></li>
+        </ul>
+      </dd>
+      <dt>git</dt>
+      <dd>
+        <ul>
+          <li>Vimpr でよく使うと思われる git コマンド ( 準備中 )</li>
+          <li>junio こと git メンテナー<a href="http://www.amazon.co.jp/dp/4798023809" class="external">濱野純さんの入門Git</a> : 超オススメ</li>
+          <li><a href="http://progit.org/" class="external">Pro Git</a> : Top Page 最下部に各国語訳へのリンクがある</li>
+        </ul>
+      </dd>
+    </dl>
     <a href="index.html">to Top Page</a>
   </div>
 </body>
