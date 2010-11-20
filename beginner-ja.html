@@ -9,7 +9,7 @@
   <div id="contents">
 	  <h1>はぢめての Vimpr</h1>
     <h2>このドキュメントの目的</h2>
-    <p>このドキュメントでは「Vimpr に参加したいけどどうすればいいのか、さっぱりわかんない」という人や「github って何？」「リポジトリに push するの、ハジメテなの <span class="red">&hearts;</span>」という人が、Vimpr に参加するのに必要な手順を箇条書きにしています。</p>
+    <p>このドキュメントでは「Vimpr に参加したいけどどうすればいいのか、さっぱりわかんない」という人や「github って何？」「リポジトリに push するの、ハジメテなの <span class="warn">&hearts;</span>」という人が、Vimpr に参加するのに必要な手順を箇条書きにしています。</p>
     <p>なお、以下の説明は Linux を前提に書かれているので、他の OS を利用されている方は適宜読みかえてください。</p>
 
     <h2>とりあえず push できるようになりましょう</h2>
@@ -46,7 +46,7 @@
           <li>&quot;git rebase master topic_branch_name&quot; を実行します。</li>
           <li>&quot;git checkout master&quot; を実行します。</li>
           <li>&quot;git merge topic_branch_name&quot; を実行します。</li>
-          <li>&quot;git push&quot; を実行します。<span class="red">--force オプションは絶対に使ってはいけません</span>。</li>
+          <li>&quot;git push&quot; を実行します。<span class="warn">--force オプションは絶対に使ってはいけません</span>。</li>
           <li>SSH 公開鍵を作成する時に設定したパスワードを入力します。</li>
         </ol>
       </li>
@@ -61,7 +61,7 @@
     <h2>注意事項</h2>
     <ul style="line-height:1.5em;">
       <li>github 上の branch は fast-forward にすることを厳守してください</li>
-      <li>繰り返しますが push 時にエラーが発生する場合、<span class="red">&quot;git push -force&quot; は絶対にやってはいけません。github 上のリポジトリが壊れます。</li>
+      <li>繰り返しますが push 時にエラーが発生する場合、<span class="warn">&quot;git push -force&quot; は絶対にやってはいけません。github 上のリポジトリが壊れます。</li>
     </ul>
 
     <h2>参考資料</h2>
