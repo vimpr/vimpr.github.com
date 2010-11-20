@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Vimpr でよく使うと思われる git コマンド</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <div id="contents">
+	  <h1>Vimpr でよく使うと思われる git コマンド</h1>
+    <h2>はじめに</h2>
+    <p>ここでは Vimpr でよく使うと思われる git コマンドの一覧と概説を提供します。全ての git コマンドやオプションを網羅しているわけではありませんし、git を利用したワークフローまでは記載しませんので、git メンテナー<a href="http://www.amazon.co.jp/dp/4798023809" class="external">濱野純さんの入門Git</a>等で勉強してください。</p>
+    <p>またこのページに記載したいコマンドがあれば、追記してください。</p>
+
+    <h2>たぶんよく使う git コマンド一覧</h2>
+    <dl style="line-height:1.5em;">
+      <dt class="dt-title">リモート・リポジトリ関連</dt>
+      <dd>
+        <dl>
+          <dt class="dt-title">git clone</dt>
+          <dd>リモート・リポジトリをローカルへ clone<br>
+              git clone git@github.com:vimpr/vimperator-plugins.git<br>
+              git clone git@github.com:vimpr/vimperator-rc.git<br>
+              git clone git@github.com:vimpr/vimperator-colors.git
+          </dd>
+          <dt class="dt-title">git pull --rebase</dt>
+          <dd>リモート・リポジトリからローカル・リポジトリに pull</dd>
+          <dt class="dt-title">git push</dt>
+          <dd>ローカル・リポジトリをリモート・リポジトリに push<br>
+              <span class="red">--force 厳禁</span>
+          </dd>
+        </dl>
+      </dd>
+      <dt class="dt-title">branch 操作</dt>
+      <dd>
+        <dl>
+          <dt class="dt-title">git branch</dt>
+          <dd>branch の一覧表示</dd>
+          <dt class="dt-title">git checkout -b branch_name</dt>
+          <dd>branch の作成と checkout</dd>
+          <dt class="dt-title">git branch branch_name</dt>
+          <dd>指定 branch の checkout</dd>
+          <dt class="dt-title">git branch -d branch_name</dt>
+          <dd>指定 branch の削除</dd>
+        </dl>
+      </dd>
+      <dt class="dt-title">状況確認</dt>
+      <dd>
+        <dl>
+          <dt class="dt-title">git status</dt>
+          <dd>リポジトリ、インデックス、ワークスペースの状況を表示</dd>
+        </dl>
+      </dd>
+      <dt class="dt-title">commit 関連</dt>
+      <dd>
+        <dl>
+          <dt class="dt-title">git add file_name</dt>
+          <dd>ワークスペース上の変更をインデックスに登録</dd>
+          <dt class="dt-title">git commit</dt>
+          <dd>インデックス上の変更をリポジトリに登録</dd>
+          <dt class="dt-title">git commit -a</dt>
+          <dd>ワークスペース上の変更をリポジトリに登録</dd>
+        </dl>
+      </dd>
+      <dt class="dt-title">merge 関連</dt>
+      <dd>
+        <dl>
+          <dt class="dt-title">git rebase target_branch topic_branck</dt>
+          <dd>topic branch を rebase し、target_branch の延長上に置く<br>
+            <pre>
+             A---B---C topic
+            /
+       D---E---F---G master
+
+                ↓
+
+                     A'--B'--C' topic
+                    /
+       D---E---F---G master
+            </pre>
+          </dd>
+          <dt class="dt-title">git merge branch_name</dt>
+          <dd>現在の branch に branch_name の branch を merge</dd>
+          <dt class="dt-title">fast-forward について</dt>
+          <dd>上記 rebase 後に merge を行うと履歴は以下のように fast-forward になる。
+            <pre>
+       D---E---F---G---A'---B'---C' master
+                                    topic
+            </pre>
+          </dd>
+        </dl>
+      </dd>
+    </dl>
+    <hr>
+    <a href="beginner-ja.html">はぢめての Vimpr へ</a>
+  </div>
+</body>
+</html>
