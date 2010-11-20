@@ -33,6 +33,7 @@ h2 {
 }
 .warn {
   color:red;
+  font-weight:bold;
 }
 .dt-title {
   font-weight:bold;
